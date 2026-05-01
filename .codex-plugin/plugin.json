@@ -1,7 +1,7 @@
 {
   "name": "my-codex-plugin",
   "version": "0.1.0",
-  "description": "Personal Codex plugin with reusable local skills and a smoke-test skill.",
+  "description": "Personal Codex plugin bundling practical coding, debugging, testing, deployment, documentation, and workflow skills.",
   "author": {
     "name": "Mikita",
     "email": "replace-with-your-email@example.com",
@@ -9,18 +9,23 @@
   },
   "homepage": "https://qqhgdkktu.github.io/my-codex-plugin/",
   "repository": "https://github.com/qqhgdkktu/my-codex-plugin",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSES",
   "keywords": [
     "codex",
     "plugin",
     "skills",
-    "local"
+    "local",
+    "debugging",
+    "testing",
+    "deployment",
+    "security",
+    "frontend"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "My Codex Plugin",
-    "shortDescription": "Local plugin for personal Codex skills",
-    "longDescription": "A personal Codex plugin that hosts custom skills, scripts, and assets. It includes a plugin-check skill to confirm the plugin is installed and loaded.",
+    "shortDescription": "Practical skills for coding, testing, debugging, docs, deployment, and workflows",
+    "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, systematic debugging, planning, frontend work, research, deployment, GitHub workflows, documents, and security.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [
@@ -32,8 +37,9 @@
     "privacyPolicyURL": "https://github.com/qqhgdkktu/my-codex-plugin",
     "termsOfServiceURL": "https://github.com/qqhgdkktu/my-codex-plugin",
     "defaultPrompt": [
-      "Check that my local Codex plugin is loaded.",
-      "Use my local Codex plugin skills."
+      "Use the best skill from my plugin for this task.",
+      "Use systematic-debugging on this failure.",
+      "Use plugin-check to verify my plugin is loaded."
     ],
     "brandColor": "#111111",
     "screenshots": []

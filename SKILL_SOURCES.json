@@ -1,0 +1,284 @@
+{
+  "sources": [
+    {
+      "skill": "chatgpt-apps",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "cli-creator",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "cloudflare-deploy",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "doc",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "gh-address-comments",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "gh-fix-ci",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "jupyter-notebook",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "migrate-to-codex",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "netlify-deploy",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "notion-knowledge-capture",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "notion-research-documentation",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "notion-spec-to-implementation",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "openai-docs",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "pdf",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "playwright",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "render-deploy",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "screenshot",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "security-best-practices",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "security-threat-model",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "transcribe",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "vercel-deploy",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "yeet",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "plugin-creator",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "skill-creator",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "skill-installer",
+      "source": "openai/skills",
+      "stars": 17934,
+      "license": "per-skill LICENSE.txt",
+      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+    },
+    {
+      "skill": "systematic-debugging",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "tdd",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "planning-with-files",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "frontend-skill",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "better-icons",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "dogfood",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "opensrc",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "exa-search",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "find-docs",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "find-skills",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "brainstorming",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "ai-elements",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "improve-codebase-architecture",
+      "source": "mxyhi/ok-skills",
+      "stars": 311,
+      "license": "Apache-2.0",
+      "commit": "8d7d14520705941254754e908bda0230f3ed9b64"
+    },
+    {
+      "skill": "spec-driven-develop",
+      "source": "zhu1090093659/spec_driven_develop",
+      "stars": 706,
+      "license": "MIT",
+      "commit": "9f19aa74306ac379868b09677e8e3b3550be04d7"
+    },
+    {
+      "skill": "skill-optimizer",
+      "source": "hqhq1025/skill-optimizer",
+      "stars": 67,
+      "license": "MIT",
+      "commit": "c48b4b5e22e1298df6c0cc0c412af2d0484f5f27"
+    }
+  ]
+}

@@ -1,18 +1,41 @@
 # My Codex Plugin
 
-Personal Codex plugin for reusable local skills.
+Personal Codex plugin with a practical skill bundle for day-to-day engineering.
 
 - Repository: <https://github.com/qqhgdkktu/my-codex-plugin>
 - Website: <https://qqhgdkktu.github.io/my-codex-plugin/>
+- Skill count: 41
 
-## Contents
+## What It Does
 
-- `.codex-plugin/plugin.json` - plugin manifest
-- `skills/plugin-check/SKILL.md` - smoke-test skill confirming the plugin is loaded
-- `docs/` - static GitHub Pages website
-- `.github/workflows/pages.yml` - GitHub Pages deployment workflow
+This plugin adds selected, working skills for:
 
-## Install
+- coding workflows: `tdd`, `systematic-debugging`, `spec-driven-develop`, `planning-with-files`
+- frontend work: `frontend-skill`, `ai-elements`, `better-icons`, `playwright`, `dogfood`
+- research and docs: `openai-docs`, `find-docs`, `find-skills`, `exa-search`, `opensrc`
+- deployment: `vercel-deploy`, `netlify-deploy`, `cloudflare-deploy`, `render-deploy`
+- GitHub and CI: `gh-fix-ci`, `gh-address-comments`, `yeet`
+- files and media: `doc`, `pdf`, `jupyter-notebook`, `screenshot`, `transcribe`
+- security: `security-best-practices`, `security-threat-model`
+- plugin/skill maintenance: `plugin-creator`, `skill-creator`, `skill-installer`, `skill-optimizer`, `plugin-check`
+- Notion workflows: `notion-knowledge-capture`, `notion-research-documentation`, `notion-spec-to-implementation`
+
+The bundle is intentionally not every skill found online. It excludes no-license, narrow, brittle, or heavy external-tool skills unless they are likely to be broadly useful.
+
+## Sources
+
+Skills were selected from high-star public repositories:
+
+| Source | Stars at selection | License policy |
+|---|---:|---|
+| `openai/skills` | 17,934 | per-skill `LICENSE.txt` |
+| `zhu1090093659/spec_driven_develop` | 706 | MIT |
+| `mxyhi/ok-skills` | 311 | Apache-2.0 |
+| `hqhq1025/skill-optimizer` | 67 | MIT |
+
+See `SKILL_SOURCES.json` and `NOTICE.md` for exact source commits.
+
+## Install Locally
 
 For local development, register a marketplace rooted at your home directory:
 
@@ -49,18 +72,35 @@ Then make sure `/Users/mikita/.agents/plugins/marketplace.json` includes:
 
 Restart Codex after changing plugin or marketplace configuration.
 
-## Smoke test
+## Usage
 
-After installing and restarting Codex, ask:
+Skills are selected by Codex based on each skill's `description`. You do not need
+to mention the plugin every time. For important workflows, explicitly name the
+skill to force the behavior:
 
 ```text
 Use plugin-check to verify my plugin is loaded.
+Use systematic-debugging on this test failure.
+Use tdd before implementing this feature.
+Use frontend-skill for this landing page.
 ```
 
-Expected result: Codex confirms that `my-codex-plugin` is installed and loaded.
+Expected smoke-test result: Codex confirms that `my-codex-plugin` is installed and loaded.
+
+## Validate
+
+```bash
+python3 scripts/validate_plugin.py
+```
 
 ## Publishing
 
 This repository includes a GitHub Pages workflow. After pushing to GitHub, open
 the repository settings and make sure Pages is configured to deploy from GitHub
 Actions if it is not enabled automatically.
+
+## Licensing
+
+This repository has mixed upstream licensing. Each imported skill keeps its
+`LICENSE.txt`. The wrapper plugin files are provided as-is. Review `NOTICE.md`
+before redistributing.
