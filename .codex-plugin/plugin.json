@@ -1,5 +1,5 @@
 {
-  "name": "my-codex-plugin",
+  "name": "codex-skillpack",
   "version": "0.1.0",
   "description": "Personal Codex plugin bundling practical coding, debugging, testing, deployment, documentation, and workflow skills.",
   "author": {
@@ -7,8 +7,8 @@
     "email": "replace-with-your-email@example.com",
     "url": "https://github.com/qqhgdkktu"
   },
-  "homepage": "https://qqhgdkktu.github.io/my-codex-plugin/",
-  "repository": "https://github.com/qqhgdkktu/my-codex-plugin",
+  "homepage": "https://qqhgdkktu.github.io/codex-skillpack/",
+  "repository": "https://github.com/qqhgdkktu/codex-skillpack",
   "license": "SEE LICENSES",
   "keywords": [
     "codex",
@@ -23,7 +23,7 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "My Codex Plugin",
+    "displayName": "Codex Skillpack",
     "shortDescription": "Practical skills for coding, testing, debugging, docs, deployment, and workflows",
     "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, systematic debugging, planning, frontend work, research, deployment, GitHub workflows, documents, and security.",
     "developerName": "Mikita",
@@ -33,9 +33,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://qqhgdkktu.github.io/my-codex-plugin/",
-    "privacyPolicyURL": "https://github.com/qqhgdkktu/my-codex-plugin",
-    "termsOfServiceURL": "https://github.com/qqhgdkktu/my-codex-plugin",
+    "websiteURL": "https://qqhgdkktu.github.io/codex-skillpack/",
+    "privacyPolicyURL": "https://github.com/qqhgdkktu/codex-skillpack",
+    "termsOfServiceURL": "https://github.com/qqhgdkktu/codex-skillpack",
     "defaultPrompt": [
       "Use the best skill from my plugin for this task.",
       "Use systematic-debugging on this failure.",

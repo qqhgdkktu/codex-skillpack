@@ -1,9 +1,9 @@
-# My Codex Plugin
+# Codex Skillpack
 
 Personal Codex plugin with a practical skill bundle for day-to-day engineering.
 
-- Repository: <https://github.com/qqhgdkktu/my-codex-plugin>
-- Website: <https://qqhgdkktu.github.io/my-codex-plugin/>
+- Repository: <https://github.com/qqhgdkktu/codex-skillpack>
+- Website: <https://qqhgdkktu.github.io/codex-skillpack/>
 - Skill count: 41
 
 ## What It Does
@@ -44,7 +44,7 @@ For local development, register a marketplace rooted at your home directory:
 source_type = "local"
 source = "/Users/mikita"
 
-[plugins."my-codex-plugin@local-plugins"]
+[plugins."codex-skillpack@local-plugins"]
 enabled = true
 ```
 
@@ -55,10 +55,10 @@ Then make sure `/Users/mikita/.agents/plugins/marketplace.json` includes:
   "name": "local-plugins",
   "plugins": [
     {
-      "name": "my-codex-plugin",
+      "name": "codex-skillpack",
       "source": {
         "source": "local",
-        "path": "./plugins/my-codex-plugin"
+        "path": "./plugins/codex-skillpack"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -85,7 +85,7 @@ Use tdd before implementing this feature.
 Use frontend-skill for this landing page.
 ```
 
-Expected smoke-test result: Codex confirms that `my-codex-plugin` is installed and loaded.
+Expected smoke-test result: Codex confirms that `codex-skillpack` is installed and loaded.
 
 ## Validate
 

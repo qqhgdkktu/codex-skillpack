@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate my-codex-plugin structure and bundled skills."""
+"""Validate codex-skillpack structure and bundled skills."""
 
 from __future__ import annotations
 
@@ -35,8 +35,8 @@ def frontmatter_value(text: str, key: str) -> str | None:
 
 def main() -> int:
     manifest = load_json(PLUGIN_JSON)
-    if manifest.get("name") != "my-codex-plugin":
-        fail("plugin.json name must be my-codex-plugin")
+    if manifest.get("name") != "codex-skillpack":
+        fail("plugin.json name must be codex-skillpack")
     if manifest.get("skills") != "./skills/":
         fail("plugin.json skills must be ./skills/")
 
