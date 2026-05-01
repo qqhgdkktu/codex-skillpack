@@ -95,9 +95,14 @@ python3 scripts/validate_plugin.py
 
 ## Publishing
 
-This repository includes a GitHub Pages workflow. After pushing to GitHub, open
-the repository settings and make sure Pages is configured to deploy from GitHub
-Actions if it is not enabled automatically.
+The website is a static page in `docs/`. After pushing to GitHub, open
+`Settings -> Pages` and set:
+
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/docs`
+
+The site will publish at <https://qqhgdkktu.github.io/codex-skillpack/>.
 
 ## Licensing
 
