@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Codex Plugin</title>
+    <meta
+      name="description"
+      content="A personal Codex plugin for reusable local skills, starting with a plugin-check smoke test."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #151719;
+        --muted: #5d646b;
+        --line: #d9dee3;
+        --panel: #ffffff;
+        --surface: #f5f7f8;
+        --accent: #1f7a5a;
+        --accent-2: #2f5f98;
+        --warning: #b45f16;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+        line-height: 1.5;
+      }
+
+      a {
+        color: var(--accent-2);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      nav {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+      }
+
+      .mark {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--line);
+        background: var(--ink);
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 72px 0 44px;
+        background: #ffffff;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+        gap: 44px;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        max-width: 760px;
+        font-size: clamp(42px, 6vw, 76px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 19px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button.secondary {
+        border-color: var(--line);
+        background: #fff;
+        color: var(--ink);
+      }
+
+      .terminal {
+        border: 1px solid var(--line);
+        background: #101214;
+        color: #e9f1ed;
+        padding: 18px;
+        overflow: hidden;
+      }
+
+      .terminal-top {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #d66a4c;
+      }
+
+      .dot:nth-child(2) {
+        background: #d6a94c;
+      }
+
+      .dot:nth-child(3) {
+        background: #4cae77;
+      }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      main {
+        padding: 40px 0 64px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        padding: 20px;
+        min-height: 170px;
+      }
+
+      .card h2,
+      .section h2 {
+        margin: 0 0 10px;
+        font-size: 21px;
+        letter-spacing: 0;
+      }
+
+      .card p,
+      .section p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .section {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .num {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 800;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.95em;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          padding-top: 44px;
+        }
+
+        .hero-grid,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">CX</div>
+          <span>My Codex Plugin</span>
+        </div>
+        <div class="nav-links">
+          <a href="#install">Install</a>
+          <a href="#verify">Verify</a>
+          <a href="https://github.com/qqhgdkktu/my-codex-plugin">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>My Codex Plugin</h1>
+          <p class="lead">
+            A personal Codex plugin for reusable local skills. It starts with a
+            plugin-check skill so you can confirm Codex has loaded the plugin.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/qqhgdkktu/my-codex-plugin">Open Repository</a>
+            <a class="button secondary" href="#install">Install Locally</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Plugin smoke test command">
+          <div class="terminal-top" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <pre>Use plugin-check to verify my plugin is loaded.</pre>
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap">
+      <div class="grid">
+        <article class="card">
+          <h2>Plugin Manifest</h2>
+          <p>Defines the plugin metadata and points Codex at <code>./skills/</code>.</p>
+        </article>
+        <article class="card">
+          <h2>Skill Bundle</h2>
+          <p>Includes <code>plugin-check</code>, a small skill for install verification.</p>
+        </article>
+        <article class="card">
+          <h2>GitHub Pages</h2>
+          <p>Ships with a Pages workflow so this site can deploy from <code>docs/</code>.</p>
+        </article>
+      </div>
+
+      <section class="section" id="install">
+        <h2>Install Locally</h2>
+        <p>Register a local marketplace rooted at your home directory, then restart Codex.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div>Clone this repository into <code>/Users/mikita/plugins/my-codex-plugin</code>.</div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div>Point <code>/Users/mikita/.agents/plugins/marketplace.json</code> at <code>./plugins/my-codex-plugin</code>.</div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div>Enable <code>my-codex-plugin@local-plugins</code> in <code>/Users/mikita/.codex/config.toml</code>.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="verify">
+        <h2>Verify</h2>
+        <p>
+          After restarting Codex, ask it to use <code>plugin-check</code>.
+          A successful response confirms that the plugin and skill were loaded.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        Built for Codex plugin testing. Repository:
+        <a href="https://github.com/qqhgdkktu/my-codex-plugin">qqhgdkktu/my-codex-plugin</a>.
+      </div>
+    </footer>
+  </body>
+</html>
