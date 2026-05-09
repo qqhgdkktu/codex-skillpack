@@ -5,8 +5,9 @@ This plugin bundles selected third-party Agent Skills for personal Codex use.
 The selection favors practical, working skills for software engineering:
 debugging, TDD, planning, frontend work, documentation, deployment, GitHub/CI,
 security, file handling, production launch workflows, source-grounded work,
-observability, Figma design workflows, performance, and skill/plugin
-maintenance.
+observability, focused Figma-to-code workflows, performance, and skill/plugin
+maintenance. On 2026-05-09 the bundle was pruned from 83 to 56 skills to reduce
+trigger ambiguity.
 
 ## Sources
 
@@ -15,7 +16,6 @@ maintenance.
 | `addyosmani/agent-skills` | `4c585c3721a3da180f760a91142d704c9b97c80c` | 37,183 | MIT copied into imported skill dirs |
 | `openai/skills` | `4c4058ebf44f6734e62c70ab4a81246d4d093fc8` | 18,688 | per-skill `LICENSE.txt` |
 | `mxyhi/ok-skills` | `0cab7e8a7cddc187e627604e6ce384077c7f5574` | 326 | Apache-2.0 copied into imported skill dirs |
-| `zhu1090093659/spec_driven_develop` | `9f19aa74306ac379868b09677e8e3b3550be04d7` | 714 | MIT copied into imported skill dirs |
 | `hqhq1025/skill-optimizer` | `c48b4b5e22e1298df6c0cc0c412af2d0484f5f27` | 72 | MIT copied into imported skill dirs |
 
 ## 2026-05-09 Refresh
@@ -35,12 +35,34 @@ refreshed, 7 practical skills were added (`autoresearch`, `browser-trace`,
 `karpathy-guidelines`), and stale `brainstorming` was removed because upstream
 replaced it with more focused skills.
 
+## 2026-05-09 Lean Prune
+
+I reviewed the 83-skill set for practical value and routing clarity. The bundle
+now keeps 56 high-signal skills and removes 27 noisy candidates:
+
+- duplicate workflows: extra debugging, TDD, planning, and meta skill-routing
+  skills that overlapped with stronger retained skills;
+- narrow Figma write workflows: Code Connect, new-file creation, full design
+  generation, and design-system-library generation;
+- heavy or brittle workflows: broad autonomous loops, browser tracing,
+  Playwright js-repl interactivity, ownership graph analysis, and speech TTS;
+- interactive stress-test modes and broad behavioral guidelines that could
+  over-trigger in normal coding chats.
+
+Retained skills prioritize day-to-day engineering: TDD, diagnosis, API design,
+source-grounded implementation, code review, frontend polish, Figma-to-code,
+docs, deployment, Sentry, security, performance, and plugin maintenance.
+
+The `zhu1090093659/spec_driven_develop` skill was removed in this pass because
+it overlapped with the retained `spec-driven-development` workflow.
+
 ## Added from `addyosmani/agent-skills`
 
-I evaluated the full current skill tree and imported all 22 skills. They form a
-cohesive engineering lifecycle pack rather than a mixed grab bag: idea/spec,
-planning, incremental build, TDD, browser verification, source-grounded
-development, review, security, performance, migration, CI/CD, and launch.
+I evaluated the full current skill tree. It forms a cohesive engineering
+lifecycle pack rather than a mixed grab bag: idea/spec, planning, incremental
+build, browser verification, source-grounded development, review, security,
+performance, migration, CI/CD, and launch. The lean bundle keeps the strongest,
+least-duplicative subset.
 
 Shared reference files from the upstream `references/` directory were copied
 inside each imported skill so Codex can resolve them relative to `SKILL.md`.
@@ -49,10 +71,10 @@ script path with a local `scripts/idea-refine.sh` path.
 
 ## Exclusions
 
-I intentionally did not import every skill from every repository. Excluded
-skills include no-license repositories, very narrow domain packs, and skills
-that depend on heavy or brittle external tools unless they are likely to be
-useful in normal Codex work.
+I intentionally did not keep every imported skill. Excluded skills include
+no-license repositories, duplicate workflows, broad meta skills, very narrow
+domain packs, and skills that depend on heavy or brittle external tools unless
+they are likely to be useful in normal Codex work.
 
 ## Redistribution
 
