@@ -14,6 +14,19 @@ PLUGIN_JSON = ROOT / ".codex-plugin" / "plugin.json"
 SKILLS_DIR = ROOT / "skills"
 SOURCES_JSON = ROOT / "SKILL_SOURCES.json"
 EXPECTED_SKILL_COUNT = 56
+EXPECTED_VERSION = "0.2.3"
+REQUIRED_DOCS = [
+    "README.md",
+    "LICENSE.md",
+    "NOTICE.md",
+    "THIRD_PARTY_NOTICES.md",
+    "PRIVACY.md",
+    "TERMS.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "docs/index.html",
+]
 
 
 def fail(message: str) -> None:
@@ -37,8 +50,19 @@ def main() -> int:
     manifest = load_json(PLUGIN_JSON)
     if manifest.get("name") != "codex-skillpack":
         fail("plugin.json name must be codex-skillpack")
+    if manifest.get("version") != EXPECTED_VERSION:
+        fail(f"plugin.json version must be {EXPECTED_VERSION}")
     if manifest.get("skills") != "./skills/":
         fail("plugin.json skills must be ./skills/")
+    if manifest.get("license") != "SEE LICENSE.md AND NOTICE.md":
+        fail("plugin.json license must point to LICENSE.md and NOTICE.md")
+
+    for rel_path in REQUIRED_DOCS:
+        path = ROOT / rel_path
+        if not path.exists():
+            fail(f"required documentation file is missing: {rel_path}")
+        if not path.read_text(encoding="utf-8", errors="replace").strip():
+            fail(f"required documentation file is empty: {rel_path}")
 
     source_manifest = load_json(SOURCES_JSON)
     imported = {entry["skill"] for entry in source_manifest.get("sources", [])}
@@ -72,7 +96,10 @@ def main() -> int:
     if missing_license:
         fail(f"imported skills missing LICENSE.txt: {missing_license}")
 
-    print(f"ok: {len(skill_dirs)} skills, {len(imported)} imported, no duplicate names")
+    print(
+        f"ok: {len(skill_dirs)} skills, {len(imported)} imported, "
+        f"version {EXPECTED_VERSION}, docs present, no duplicate names"
+    )
     return 0
 
 

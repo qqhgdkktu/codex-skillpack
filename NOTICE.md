@@ -1,6 +1,7 @@
 # Notice
 
-This plugin bundles selected third-party Agent Skills for personal Codex use.
+This plugin bundles selected third-party Agent Skills for local and shared Codex
+use.
 
 The selection favors practical, working skills for software engineering:
 debugging, TDD, planning, frontend work, documentation, deployment, GitHub/CI,
@@ -8,6 +9,11 @@ security, file handling, production launch workflows, source-grounded work,
 observability, focused Figma-to-code workflows, performance, and skill/plugin
 maintenance. On 2026-05-09 the bundle was pruned from 83 to 56 skills to reduce
 trigger ambiguity.
+
+This project is an unofficial redistribution bundle. It is not affiliated with,
+endorsed by, or sponsored by OpenAI, GitHub, Sentry, Figma, Notion, Linear,
+Vercel, Netlify, Cloudflare, Render, or any upstream skill author unless that
+party states otherwise.
 
 ## Sources
 
@@ -17,6 +23,10 @@ trigger ambiguity.
 | `openai/skills` | `4c4058ebf44f6734e62c70ab4a81246d4d093fc8` | 18,688 | per-skill `LICENSE.txt` |
 | `mxyhi/ok-skills` | `0cab7e8a7cddc187e627604e6ce384077c7f5574` | 326 | Apache-2.0 copied into imported skill dirs |
 | `hqhq1025/skill-optimizer` | `c48b4b5e22e1298df6c0cc0c412af2d0484f5f27` | 72 | MIT copied into imported skill dirs |
+
+`SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star
+count, and license metadata. `THIRD_PARTY_NOTICES.md` summarizes the same
+information in a human-readable redistribution format.
 
 ## 2026-05-09 Refresh
 
@@ -76,7 +86,34 @@ no-license repositories, duplicate workflows, broad meta skills, very narrow
 domain packs, and skills that depend on heavy or brittle external tools unless
 they are likely to be useful in normal Codex work.
 
+## License Policy
+
+This repository contains two kinds of material:
+
+- wrapper files created for Codex Skillpack, covered by `LICENSE.md`;
+- imported third-party skills, each governed by the `LICENSE.txt` preserved
+  inside that skill directory.
+
+Do not treat the root wrapper license as replacing upstream skill licenses.
+Keep upstream `LICENSE.txt` files and attribution metadata when redistributing
+the bundle or copying skills into another project.
+
+## No Warranty
+
+The skills are workflow instructions, not guarantees. They may suggest commands,
+tool use, external service calls, or code changes that are inappropriate for a
+specific repository. Users remain responsible for reviewing actions, protecting
+secrets, checking third-party terms, and verifying generated code before use.
+
+## No Legal Advice
+
+This notice, the wrapper license, and the repository documentation are practical
+project documentation, not legal advice. Consult a qualified professional before
+using or redistributing this bundle in a regulated, commercial, or high-risk
+environment.
+
 ## Redistribution
 
-This is not an official OpenAI plugin. Review the license file inside each
-skill directory before publishing or redistributing this bundle.
+Review `LICENSE.md`, `PRIVACY.md`, `TERMS.md`, `SECURITY.md`, and the license
+file inside each skill directory before publishing, redistributing, or using
+this bundle in a team or commercial environment.
