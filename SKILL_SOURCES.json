@@ -279,6 +279,160 @@
       "stars": 67,
       "license": "MIT",
       "commit": "c48b4b5e22e1298df6c0cc0c412af2d0484f5f27"
+    },
+    {
+      "skill": "api-and-interface-design",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "browser-testing-with-devtools",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "ci-cd-and-automation",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "code-review-and-quality",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "code-simplification",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "context-engineering",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "debugging-and-error-recovery",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "deprecation-and-migration",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "documentation-and-adrs",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "doubt-driven-development",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "frontend-ui-engineering",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "git-workflow-and-versioning",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "idea-refine",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "incremental-implementation",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "performance-optimization",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "planning-and-task-breakdown",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "security-and-hardening",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "shipping-and-launch",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "source-driven-development",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "spec-driven-development",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "test-driven-development",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+    },
+    {
+      "skill": "using-agent-skills",
+      "source": "addyosmani/agent-skills",
+      "stars": 37164,
+      "license": "MIT",
+      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
     }
   ]
 }

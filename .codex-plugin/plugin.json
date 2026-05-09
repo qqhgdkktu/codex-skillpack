@@ -25,7 +25,7 @@
   "interface": {
     "displayName": "Codex Skillpack",
     "shortDescription": "Practical skills for coding, testing, debugging, docs, deployment, and workflows",
-    "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, systematic debugging, planning, frontend work, research, deployment, GitHub workflows, documents, and security.",
+    "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, systematic debugging, source-grounded development, planning, frontend work, research, deployment, GitHub workflows, documents, security, performance, and launch readiness.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [
@@ -39,6 +39,7 @@
     "defaultPrompt": [
       "Use the best skill from my plugin for this task.",
       "Use systematic-debugging on this failure.",
+      "Use source-driven-development for this framework integration.",
       "Use plugin-check to verify my plugin is loaded."
     ],
     "brandColor": "#111111",

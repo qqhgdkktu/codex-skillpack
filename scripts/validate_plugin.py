@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_JSON = ROOT / ".codex-plugin" / "plugin.json"
 SKILLS_DIR = ROOT / "skills"
 SOURCES_JSON = ROOT / "SKILL_SOURCES.json"
-EXPECTED_SKILL_COUNT = 41
+EXPECTED_SKILL_COUNT = 63
 
 
 def fail(message: str) -> None:
@@ -42,8 +42,8 @@ def main() -> int:
 
     source_manifest = load_json(SOURCES_JSON)
     imported = {entry["skill"] for entry in source_manifest.get("sources", [])}
-    if len(imported) != 40:
-        fail(f"expected 40 imported skills in SKILL_SOURCES.json, found {len(imported)}")
+    if len(imported) != 62:
+        fail(f"expected 62 imported skills in SKILL_SOURCES.json, found {len(imported)}")
 
     skill_dirs = sorted(path for path in SKILLS_DIR.iterdir() if path.is_dir())
     if len(skill_dirs) != EXPECTED_SKILL_COUNT:
