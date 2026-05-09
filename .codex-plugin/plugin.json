@@ -1,7 +1,7 @@
 {
   "name": "codex-skillpack",
-  "version": "0.2.0",
-  "description": "Personal Codex plugin bundling practical coding, debugging, testing, deployment, documentation, and workflow skills.",
+  "version": "0.2.1",
+  "description": "Codex plugin bundling practical coding, debugging, testing, deployment, documentation, design, observability, and workflow skills.",
   "author": {
     "name": "Mikita",
     "email": "replace-with-your-email@example.com",
@@ -24,8 +24,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Skillpack",
-    "shortDescription": "Practical skills for coding, testing, debugging, docs, deployment, and workflows",
-    "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, systematic debugging, source-grounded development, planning, frontend work, research, deployment, GitHub workflows, documents, security, performance, and launch readiness.",
+    "shortDescription": "Practical skills for coding, testing, debugging, docs, design, observability, and deployment",
+    "longDescription": "A personal Codex plugin bundling selected working skills from high-star Agent Skills repositories, including OpenAI official skills plus MIT/Apache community skills for TDD, debugging, source-grounded development, planning, Figma workflows, frontend work, research, observability, deployment, GitHub workflows, documents, security, performance, and launch readiness.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [
@@ -40,6 +40,9 @@
       "Use the best skill from my plugin for this task.",
       "Use systematic-debugging on this failure.",
       "Use source-driven-development for this framework integration.",
+      "Use diagnose on this regression.",
+      "Use sentry to inspect recent production errors.",
+      "Use figma-implement-design for this Figma screen.",
       "Use plugin-check to verify my plugin is loaded."
     ],
     "brandColor": "#111111",
