@@ -6,9 +6,9 @@ use.
 The selection favors practical, working skills for software engineering:
 debugging, TDD, planning, frontend work, documentation, deployment, GitHub/CI,
 security, file handling, production launch workflows, source-grounded work,
-observability, focused Figma-to-code workflows, performance, and skill/plugin
-maintenance. On 2026-05-09 the bundle was pruned from 83 to 56 skills to reduce
-trigger ambiguity.
+observability, frontend workflows, performance, and skill/plugin maintenance.
+On 2026-07-22 the bundle was refreshed and pruned to 37 skills to
+reduce trigger ambiguity and remove capabilities already supplied by Codex.
 
 This project is an unofficial redistribution bundle. It is not affiliated with,
 endorsed by, or sponsored by OpenAI, GitHub, Sentry, Figma, Notion, Linear,
@@ -19,10 +19,11 @@ party states otherwise.
 
 | Repository | Commit | Stars at selection | License policy |
 |---|---|---:|---|
-| `addyosmani/agent-skills` | `4c585c3721a3da180f760a91142d704c9b97c80c` | 37,183 | MIT copied into imported skill dirs |
-| `openai/skills` | `4c4058ebf44f6734e62c70ab4a81246d4d093fc8` | 18,688 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | `0cab7e8a7cddc187e627604e6ce384077c7f5574` | 326 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | `c48b4b5e22e1298df6c0cc0c412af2d0484f5f27` | 72 | MIT copied into imported skill dirs |
+| `addyosmani/agent-skills` | `2fbfa004a0192529bc997d103fc12f19a3804aab` | 79,695 | MIT copied into imported skill dirs |
+| `openai/plugins` | `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9` | 4,656 | per-skill or plugin license preserved |
+| `openai/skills` | mixed legacy exact pins | 24,032 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1` | 455 | Apache-2.0 copied into imported skill dirs |
+| `hqhq1025/skill-optimizer` | `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84` | 139 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star
 count, and license metadata. `THIRD_PARTY_NOTICES.md` summarizes the same
@@ -48,7 +49,7 @@ replaced it with more focused skills.
 ## 2026-05-09 Lean Prune
 
 I reviewed the 83-skill set for practical value and routing clarity. The bundle
-now keeps 56 high-signal skills and removes 27 noisy candidates:
+that release kept 56 high-signal skills and removed 27 noisy candidates:
 
 - duplicate workflows: extra debugging, TDD, planning, and meta skill-routing
   skills that overlapped with stronger retained skills;
@@ -75,7 +76,8 @@ performance, migration, CI/CD, and launch. The lean bundle keeps the strongest,
 least-duplicative subset.
 
 Shared reference files from the upstream `references/` directory were copied
-inside each imported skill so Codex can resolve them relative to `SKILL.md`.
+only into the imported skills that link to them, so Codex can resolve them
+relative to `SKILL.md` without bundling unused material.
 The `idea-refine` skill was lightly adapted to replace an upstream absolute
 script path with a local `scripts/idea-refine.sh` path.
 

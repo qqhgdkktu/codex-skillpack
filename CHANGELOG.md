@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.3.0 - 2026-07-22
+
+- Refreshed retained Addy Osmani and ok-skills imports to their latest upstream
+  commits, including major security, TDD, review, architecture, and docs updates.
+- Added `debugging-and-error-recovery`, `frontend-ui-engineering`,
+  `observability-and-instrumentation`, and upstream's focused
+  `skill-personalizer` replacement.
+- Removed 24 stale, upstream-deleted, exact-duplicate, Codex-superseded, or
+  connector-owned skills to reduce routing noise; the bundle now contains 37
+  focused skills.
+- Migrated GitHub CI/comment and Netlify/Render deployment skills from the
+  deprecated `openai/skills` catalog to the current `openai/plugins` source.
+- Fixed broken architecture references by importing the current upstream
+  resources and reduced plugin starter prompts to Codex's supported maximum of
+  three.
+
 ## 0.2.3 - 2026-05-09
 
 - Added wrapper license, privacy policy, terms, security policy, contribution

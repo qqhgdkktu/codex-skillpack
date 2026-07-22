@@ -1,6 +1,11 @@
 ---
 name: render-deploy
 description: Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.
+license: MIT
+metadata:
+  author: Render
+  version: "1.1.0"
+  category: deployment
 ---
 
 # Deploy to Render
@@ -16,11 +21,6 @@ Blueprints can also run a **prebuilt Docker image** by using `runtime: image`, b
 If there is no Git remote, stop and ask the user to either:
 - Create/push a Git remote (can be minimal if only the Blueprint is needed), or
 - Use the Render Dashboard/API to deploy a prebuilt Docker image (MCP cannot create image-backed services).
-
-## Prerequisites
-
-- When sandboxing blocks the deployment network calls, rerun with `sandbox_permissions=require_escalated`.
-- The deployment might take a few minutes. Use appropriate timeout values.
 
 ## When to Use This Skill
 
@@ -112,81 +112,14 @@ If not installed, offer to install:
 
 **4. MCP Setup (if MCP isn't configured)**
 
-If `list_services()` fails because MCP isn't configured, ask whether they want to set up MCP (preferred) or continue with the CLI fallback. If they choose MCP, ask which AI tool they're using, then provide the matching instructions below. Always use their API key.
+If `list_services()` fails, set up the Render MCP server. For detailed per-tool walkthroughs, see **render-mcp**.
 
-### Cursor
+**Quick setup:** Add the Render MCP server to your AI tool's MCP config:
+- **URL:** `https://mcp.render.com/mcp`
+- **Auth header:** `Authorization: Bearer <YOUR_API_KEY>`
+- **API key:** `https://dashboard.render.com/u/*/settings#api-keys`
 
-Walk the user through these steps:
-
-1) Get a Render API key:
-```
-https://dashboard.render.com/u/*/settings#api-keys
-```
-
-2) Add this to `~/.cursor/mcp.json` (replace `<YOUR_API_KEY>`):
-```json
-{
-  "mcpServers": {
-    "render": {
-      "url": "https://mcp.render.com/mcp",
-      "headers": {
-        "Authorization": "Bearer <YOUR_API_KEY>"
-      }
-    }
-  }
-}
-```
-
-3) Restart Cursor, then retry `list_services()`.
-
-### Claude Code
-
-Walk the user through these steps:
-
-1) Get a Render API key:
-```
-https://dashboard.render.com/u/*/settings#api-keys
-```
-
-2) Add the MCP server with Claude Code (replace `<YOUR_API_KEY>`):
-```bash
-claude mcp add --transport http render https://mcp.render.com/mcp --header "Authorization: Bearer <YOUR_API_KEY>"
-```
-
-3) Restart Claude Code, then retry `list_services()`.
-
-### Codex
-
-Walk the user through these steps:
-
-1) Get a Render API key:
-```
-https://dashboard.render.com/u/*/settings#api-keys
-```
-
-2) Set it in their shell:
-```bash
-export RENDER_API_KEY="<YOUR_API_KEY>"
-```
-
-3) Add the MCP server with the Codex CLI:
-```bash
-codex mcp add render --url https://mcp.render.com/mcp --bearer-token-env-var RENDER_API_KEY
-```
-
-4) Restart Codex, then retry `list_services()`.
-
-### Other Tools
-
-If the user is on another AI app, direct them to the Render MCP docs for that tool's setup steps and install method.
-
-### Workspace Selection
-
-After MCP is configured, have the user set the active Render workspace with a prompt like:
-
-```
-Set my Render workspace to [WORKSPACE_NAME]
-```
+After configuring, restart your tool and retry `list_services()`. Then set your workspace with `list_workspaces()` / `get_selected_workspace()`.
 
 **5. Check Authentication (CLI fallback only)**
 
@@ -462,18 +395,6 @@ Detailed checklist and commands: [references/post-deploy-checks.md](references/p
 
 If the service fails to start or health checks time out, use the basic triage guide:
 [references/troubleshooting-basics.md](references/troubleshooting-basics.md)
-
-## Troubleshooting
-
-### Escalated Network Access
-
-If deployment fails due to network issues (timeouts, DNS errors, connection resets), rerun the deploy with escalated permissions (use `sandbox_permissions=require_escalated`). The deploy requires escalated network access when sandbox networking blocks outbound requests.
-
-Example guidance to the user:
-
-```
-The deploy needs escalated network access to deploy to Render. I can rerun the command with escalated permissions—want me to proceed?
-```
 
 Optional: If you need deeper diagnostics (metrics/DB checks/error catalog), suggest installing the
 `render-debug` skill. It is not required for the core deploy flow.

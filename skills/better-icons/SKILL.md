@@ -1,6 +1,6 @@
 ---
 name: better-icons
-description: 'Use when working with icons in any project. Provides CLI for searching 200+ icon libraries (Iconify) and retrieving SVGs. Commands: `better-icons search <query>` to find icons, `better-icons get <id>` to get SVG. Also available as MCP server for AI agents.'
+description: 'Use when selecting, searching, or retrieving icons for a project. Provides Iconify-backed CLI and MCP access to more than 200 icon libraries.'
 ---
 
 # Better Icons

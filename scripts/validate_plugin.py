@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_JSON = ROOT / ".codex-plugin" / "plugin.json"
 SKILLS_DIR = ROOT / "skills"
 SOURCES_JSON = ROOT / "SKILL_SOURCES.json"
-EXPECTED_SKILL_COUNT = 56
-EXPECTED_VERSION = "0.2.3"
+EXPECTED_SKILL_COUNT = 37
+EXPECTED_VERSION = "0.3.0"
 REQUIRED_DOCS = [
     "README.md",
     "LICENSE.md",
@@ -46,16 +46,32 @@ def frontmatter_value(text: str, key: str) -> str | None:
     return match.group(1).strip() if match else None
 
 
+def validate_relative_links(skill_md: Path, text: str) -> None:
+    for raw_target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", text):
+        target = raw_target.strip().strip("<>").split("#", 1)[0]
+        if not target or target.startswith(("#", "/", "mailto:")) or "://" in target:
+            continue
+        if not (skill_md.parent / target).resolve().exists():
+            fail(f"{skill_md.relative_to(ROOT)} has broken relative link: {raw_target}")
+
+
 def main() -> int:
     manifest = load_json(PLUGIN_JSON)
     if manifest.get("name") != "codex-skillpack":
         fail("plugin.json name must be codex-skillpack")
     if manifest.get("version") != EXPECTED_VERSION:
         fail(f"plugin.json version must be {EXPECTED_VERSION}")
+    if not re.fullmatch(r"(?:0|[1-9]\d*)(?:\.(?:0|[1-9]\d*)){2}", EXPECTED_VERSION):
+        fail(f"expected version is not strict semver: {EXPECTED_VERSION}")
     if manifest.get("skills") != "./skills/":
         fail("plugin.json skills must be ./skills/")
     if manifest.get("license") != "SEE LICENSE.md AND NOTICE.md":
         fail("plugin.json license must point to LICENSE.md and NOTICE.md")
+    default_prompts = manifest.get("interface", {}).get("defaultPrompt", [])
+    if len(default_prompts) > 3:
+        fail("plugin.json interface.defaultPrompt supports at most 3 entries")
+    if any(not isinstance(prompt, str) or len(prompt) > 128 for prompt in default_prompts):
+        fail("plugin.json interface.defaultPrompt entries must be strings up to 128 chars")
 
     for rel_path in REQUIRED_DOCS:
         path = ROOT / rel_path
@@ -65,9 +81,16 @@ def main() -> int:
             fail(f"required documentation file is empty: {rel_path}")
 
     source_manifest = load_json(SOURCES_JSON)
-    imported = {entry["skill"] for entry in source_manifest.get("sources", [])}
-    if len(imported) != 55:
-        fail(f"expected 55 imported skills in SKILL_SOURCES.json, found {len(imported)}")
+    source_entries = source_manifest.get("sources", [])
+    imported = {entry["skill"] for entry in source_entries}
+    if len(imported) != len(source_entries):
+        fail("SKILL_SOURCES.json contains duplicate skill entries")
+    expected_imported = EXPECTED_SKILL_COUNT - 1  # plugin-check is local to this bundle.
+    if len(imported) != expected_imported:
+        fail(
+            f"expected {expected_imported} imported skills in SKILL_SOURCES.json, "
+            f"found {len(imported)}"
+        )
 
     skill_dirs = sorted(path for path in SKILLS_DIR.iterdir() if path.is_dir())
     if len(skill_dirs) != EXPECTED_SKILL_COUNT:
@@ -86,6 +109,11 @@ def main() -> int:
             fail(f"{skill_dir.name}/SKILL.md is missing name frontmatter")
         if not description:
             fail(f"{skill_dir.name}/SKILL.md is missing description frontmatter")
+        if name != skill_dir.name:
+            fail(f"{skill_dir.name}/SKILL.md name must match its directory")
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
+            fail(f"{skill_dir.name}/SKILL.md has invalid skill name: {name}")
+        validate_relative_links(skill_md, text)
         names.append(name)
         if skill_dir.name != "plugin-check" and not (skill_dir / "LICENSE.txt").exists():
             missing_license.append(skill_dir.name)
@@ -95,6 +123,12 @@ def main() -> int:
         fail(f"duplicate skill names: {duplicates}")
     if missing_license:
         fail(f"imported skills missing LICENSE.txt: {missing_license}")
+
+    expected_imported_names = {path.name for path in skill_dirs if path.name != "plugin-check"}
+    if imported != expected_imported_names:
+        missing = sorted(expected_imported_names - imported)
+        extra = sorted(imported - expected_imported_names)
+        fail(f"SKILL_SOURCES.json mismatch; missing={missing}, extra={extra}")
 
     print(
         f"ok: {len(skill_dirs)} skills, {len(imported)} imported, "

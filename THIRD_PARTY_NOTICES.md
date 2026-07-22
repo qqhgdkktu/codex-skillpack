@@ -8,53 +8,55 @@ machine-readable source of truth is `SKILL_SOURCES.json`.
 
 | Upstream repository | Skills included | License handling |
 |---|---:|---|
-| `addyosmani/agent-skills` | 15 | MIT license copied into each imported skill directory |
-| `openai/skills` | 29 | upstream per-skill `LICENSE.txt` preserved |
-| `mxyhi/ok-skills` | 10 | Apache-2.0 license copied into each imported skill directory |
+| `addyosmani/agent-skills` | 18 | MIT license copied into each imported skill directory |
+| `openai/plugins` | 4 | upstream per-skill or plugin license preserved |
+| `openai/skills` | 8 | legacy per-skill `LICENSE.txt` preserved |
+| `mxyhi/ok-skills` | 5 | Apache-2.0 license copied into each imported skill directory |
 | `hqhq1025/skill-optimizer` | 1 | MIT license copied into imported skill directory |
 
 ## Included Skills By Source
 
 ### `addyosmani/agent-skills`
 
-Pinned commit: `4c585c3721a3da180f760a91142d704c9b97c80c`
+Pinned commit: `2fbfa004a0192529bc997d103fc12f19a3804aab`
 
 Included skills: `api-and-interface-design`, `ci-cd-and-automation`,
 `code-review-and-quality`, `code-simplification`, `deprecation-and-migration`,
-`documentation-and-adrs`, `doubt-driven-development`, `idea-refine`,
+`debugging-and-error-recovery`, `documentation-and-adrs`,
+`doubt-driven-development`, `frontend-ui-engineering`, `idea-refine`,
 `incremental-implementation`, `performance-optimization`,
-`planning-and-task-breakdown`, `security-and-hardening`,
+`observability-and-instrumentation`, `planning-and-task-breakdown`, `security-and-hardening`,
 `shipping-and-launch`, `source-driven-development`,
 `spec-driven-development`.
 
-### `openai/skills`
+### `openai/plugins`
 
-Most included OpenAI skills are pinned to
-`4c4058ebf44f6734e62c70ab4a81246d4d093fc8`. The `doc` skill is pinned to
-`fb7b56dff09cb2a44dd390cde69c717e8a319eb7`.
+Pinned commit: `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9`
 
-Included skills: `chatgpt-apps`, `cli-creator`, `cloudflare-deploy`, `doc`,
-`figma`, `figma-implement-design`, `figma-use`, `gh-address-comments`,
-`gh-fix-ci`, `jupyter-notebook`, `linear`, `migrate-to-codex`,
-`netlify-deploy`, `notion-knowledge-capture`,
-`notion-research-documentation`, `notion-spec-to-implementation`,
-`openai-docs`, `pdf`, `playwright`, `plugin-creator`, `render-deploy`,
-`screenshot`, `security-threat-model`, `sentry`, `skill-creator`,
-`skill-installer`, `transcribe`, `vercel-deploy`, `yeet`.
+Included skills: `gh-address-comments`, `gh-fix-ci`, `netlify-deploy`,
+`render-deploy`.
+
+### `openai/skills` (legacy pins)
+
+The remaining skills have no direct replacement in `openai/plugins` and remain
+pinned to the exact historical commits recorded in `SKILL_SOURCES.json`.
+
+Included skills: `chatgpt-apps`, `cli-creator`, `cloudflare-deploy`,
+`jupyter-notebook`, `migrate-to-codex`, `security-threat-model`, `transcribe`,
+`vercel-deploy`.
 
 ### `mxyhi/ok-skills`
 
-Pinned commit: `0cab7e8a7cddc187e627604e6ce384077c7f5574`
+Pinned commit: `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1`
 
-Included skills: `ai-elements`, `better-icons`, `diagnose`, `dogfood`,
-`exa-search`, `find-docs`, `frontend-skill`,
-`improve-codebase-architecture`, `opensrc`, `tdd`.
+Included skills: `ai-elements`, `better-icons`, `find-docs`,
+`improve-codebase-architecture`, `tdd`.
 
 ### `hqhq1025/skill-optimizer`
 
-Pinned commit: `c48b4b5e22e1298df6c0cc0c412af2d0484f5f27`
+Pinned commit: `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84`
 
-Included skills: `skill-optimizer`.
+Included skill: `skill-personalizer`.
 
 ## Redistribution Notes
 

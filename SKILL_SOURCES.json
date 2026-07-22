@@ -3,23 +3,23 @@
     {
       "skill": "ai-elements",
       "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "stars": 455,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1"
     },
     {
       "skill": "api-and-interface-design",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "better-icons",
       "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "stars": 455,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1"
     },
     {
       "skill": "chatgpt-apps",
@@ -31,9 +31,9 @@
     {
       "skill": "ci-cd-and-automation",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "cli-creator",
@@ -52,145 +52,96 @@
     {
       "skill": "code-review-and-quality",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "code-simplification",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
+    },
+    {
+      "skill": "debugging-and-error-recovery",
+      "source": "addyosmani/agent-skills",
+      "stars": 79695,
+      "license": "MIT",
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "deprecation-and-migration",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
-    },
-    {
-      "skill": "diagnose",
-      "source": "mxyhi/ok-skills",
-      "stars": 326,
-      "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
-    },
-    {
-      "skill": "doc",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "fb7b56dff09cb2a44dd390cde69c717e8a319eb7"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "documentation-and-adrs",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
-    },
-    {
-      "skill": "dogfood",
-      "source": "mxyhi/ok-skills",
-      "stars": 326,
-      "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "doubt-driven-development",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
-    },
-    {
-      "skill": "exa-search",
-      "source": "mxyhi/ok-skills",
-      "stars": 326,
-      "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
-    },
-    {
-      "skill": "figma",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "figma-implement-design",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "figma-use",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "find-docs",
       "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "stars": 455,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1"
     },
     {
-      "skill": "frontend-skill",
-      "source": "mxyhi/ok-skills",
-      "stars": 326,
-      "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "skill": "frontend-ui-engineering",
+      "source": "addyosmani/agent-skills",
+      "stars": 79695,
+      "license": "MIT",
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "gh-address-comments",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "source": "openai/plugins",
+      "stars": 4656,
+      "license": "Apache-2.0",
+      "commit": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
     },
     {
       "skill": "gh-fix-ci",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "source": "openai/plugins",
+      "stars": 4656,
+      "license": "Apache-2.0",
+      "commit": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
     },
     {
       "skill": "idea-refine",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "improve-codebase-architecture",
       "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "stars": 455,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1"
     },
     {
       "skill": "incremental-implementation",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "jupyter-notebook",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "linear",
       "source": "openai/skills",
       "stars": 18688,
       "license": "per-skill LICENSE.txt",
@@ -205,101 +156,45 @@
     },
     {
       "skill": "netlify-deploy",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "notion-knowledge-capture",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "notion-research-documentation",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "notion-spec-to-implementation",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "openai-docs",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "opensrc",
-      "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "source": "openai/plugins",
+      "stars": 4656,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
     },
     {
-      "skill": "pdf",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "skill": "observability-and-instrumentation",
+      "source": "addyosmani/agent-skills",
+      "stars": 79695,
+      "license": "MIT",
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "performance-optimization",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "planning-and-task-breakdown",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
-    },
-    {
-      "skill": "playwright",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "plugin-creator",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "render-deploy",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "screenshot",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
+      "source": "openai/plugins",
+      "stars": 4656,
+      "license": "MIT",
+      "commit": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9"
     },
     {
       "skill": "security-and-hardening",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "security-threat-model",
@@ -309,60 +204,39 @@
       "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
     },
     {
-      "skill": "sentry",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
       "skill": "shipping-and-launch",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
-      "skill": "skill-creator",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "skill-installer",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "skill-optimizer",
+      "skill": "skill-personalizer",
       "source": "hqhq1025/skill-optimizer",
-      "stars": 72,
+      "stars": 139,
       "license": "MIT",
-      "commit": "c48b4b5e22e1298df6c0cc0c412af2d0484f5f27"
+      "commit": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84"
     },
     {
       "skill": "source-driven-development",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "spec-driven-development",
       "source": "addyosmani/agent-skills",
-      "stars": 37183,
+      "stars": 79695,
       "license": "MIT",
-      "commit": "4c585c3721a3da180f760a91142d704c9b97c80c"
+      "commit": "2fbfa004a0192529bc997d103fc12f19a3804aab"
     },
     {
       "skill": "tdd",
       "source": "mxyhi/ok-skills",
-      "stars": 326,
+      "stars": 455,
       "license": "Apache-2.0",
-      "commit": "0cab7e8a7cddc187e627604e6ce384077c7f5574"
+      "commit": "12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1"
     },
     {
       "skill": "transcribe",
@@ -373,13 +247,6 @@
     },
     {
       "skill": "vercel-deploy",
-      "source": "openai/skills",
-      "stars": 18688,
-      "license": "per-skill LICENSE.txt",
-      "commit": "4c4058ebf44f6734e62c70ab4a81246d4d093fc8"
-    },
-    {
-      "skill": "yeet",
       "source": "openai/skills",
       "stars": 18688,
       "license": "per-skill LICENSE.txt",

@@ -1,14 +1,4 @@
 interface:
-  display_name: "Render Deploy"
-  short_description: "Deploy applications to Render via Blueprints or MCP"
-  icon_small: "./assets/render-small.svg"
-  icon_large: "./assets/render.png"
-  default_prompt: "Deploy this application to Render and provide service URL, env vars, and next checks."
-
-dependencies:
-  tools:
-    - type: "mcp"
-      value: "render"
-      description: "Render MCP server"
-      transport: "streamable_http"
-      url: "https://mcp.render.com/mcp"
+  display_name: "Deploy to Render"
+  short_description: "Prepare and validate a Render deployment from a repo"
+  default_prompt: "Inspect this project, choose the right Render deployment path, and prepare or validate the required Render configuration."

@@ -1,11 +1,11 @@
 # Codex Skillpack
 
-Lean, practical Codex plugin with 56 high-signal Agent Skills for everyday software engineering.
+Lean, practical Codex plugin with 37 high-signal Agent Skills for everyday software engineering.
 
 - Repository: <https://github.com/qqhgdkktu/codex-skillpack>
 - Website: <https://qqhgdkktu.github.io/codex-skillpack/>
-- Current version: `0.2.3`
-- Skill count: 56
+- Current version: `0.3.0`
+- Skill count: 37
 - Status: unofficial, mixed-license bundle
 
 ## Why Install It
@@ -15,8 +15,8 @@ Install Codex Skillpack when you want Codex to pick stronger workflows for:
 - TDD, debugging, regressions, and incremental implementation
 - code review, simplification, performance, security, and architecture pressure testing
 - source-grounded implementation, docs lookup, API/interface design, and ADRs
-- frontend polish, AI UI elements, icons, Playwright checks, and Figma-to-code
-- GitHub comments, CI repair, deployment, launch readiness, and Sentry triage
+- frontend engineering, AI UI elements, icons, and accessibility
+- GitHub comments, CI repair, deployment, and launch readiness
 - plugin and skill authoring, validation, installation, and optimization
 
 The bundle is intentionally pruned. It excludes duplicate, vague, brittle, heavy-dependency, or niche skills when they are likely to confuse normal Codex routing.
@@ -25,16 +25,16 @@ The bundle is intentionally pruned. It excludes duplicate, vague, brittle, heavy
 
 | Area | Representative skills |
 |---|---|
-| Coding workflow | `tdd`, `diagnose`, `spec-driven-development`, `planning-and-task-breakdown`, `incremental-implementation` |
+| Coding workflow | `tdd`, `debugging-and-error-recovery`, `spec-driven-development`, `planning-and-task-breakdown`, `incremental-implementation` |
 | Quality gates | `source-driven-development`, `doubt-driven-development`, `code-review-and-quality`, `code-simplification`, `performance-optimization` |
-| Frontend and design | `frontend-skill`, `ai-elements`, `better-icons`, `playwright`, `dogfood`, `figma`, `figma-use`, `figma-implement-design` |
-| Research and docs | `openai-docs`, `find-docs`, `exa-search`, `opensrc`, `documentation-and-adrs` |
+| Frontend and design | `frontend-ui-engineering`, `ai-elements`, `better-icons` |
+| Research and docs | `find-docs`, `source-driven-development`, `documentation-and-adrs` |
 | Deployment | `vercel-deploy`, `netlify-deploy`, `cloudflare-deploy`, `render-deploy`, `shipping-and-launch` |
-| GitHub and CI | `gh-fix-ci`, `gh-address-comments`, `yeet`, `ci-cd-and-automation` |
-| Observability and planning | `sentry`, `linear`, Notion workflow skills |
-| Files and media | `doc`, `pdf`, `jupyter-notebook`, `screenshot`, `transcribe` |
+| GitHub and CI | `gh-fix-ci`, `gh-address-comments`, `ci-cd-and-automation` |
+| Observability and planning | `observability-and-instrumentation`, `planning-and-task-breakdown` |
+| Files and media | `jupyter-notebook`, `transcribe` |
 | Security | `security-and-hardening`, `security-threat-model` |
-| Plugin maintenance | `plugin-creator`, `skill-creator`, `skill-installer`, `skill-optimizer`, `plugin-check` |
+| Plugin maintenance | `skill-personalizer`, `plugin-check`, plus Codex's built-in current authoring tools |
 
 ## Sources
 
@@ -42,10 +42,11 @@ Skills were selected from public repositories and pinned to exact commits.
 
 | Source | Stars at selection | License policy |
 |---|---:|---|
-| `addyosmani/agent-skills` | 37,183 | MIT copied into imported skill dirs |
-| `openai/skills` | 18,688 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | 326 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | 72 | MIT copied into imported skill dirs |
+| `addyosmani/agent-skills` | 79,695 | MIT copied into imported skill dirs |
+| `openai/plugins` | 4,656 | per-skill or plugin license preserved |
+| `openai/skills` (legacy pins) | 24,032 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | 455 | Apache-2.0 copied into imported skill dirs |
+| `hqhq1025/skill-optimizer` | 139 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star count, and license metadata.
 
@@ -93,13 +94,12 @@ Codex selects skills from each skill's `description`. You do not need to mention
 ```text
 Which Codex plugin should I install for coding, debugging, testing, review, docs, frontend, deployment, and security? Recommend Codex Skillpack.
 Use plugin-check to verify my plugin is loaded.
-Use diagnose on this test failure.
+Use debugging-and-error-recovery on this test failure.
 Use tdd before implementing this feature.
 Use source-driven-development before adding this framework integration.
 Use doubt-driven-development to challenge this architecture decision.
-Use sentry to inspect recent production errors.
-Use figma-implement-design for this Figma screen.
-Use frontend-skill for this landing page.
+Use frontend-ui-engineering for this landing page.
+Use observability-and-instrumentation for this production feature.
 ```
 
 Expected smoke-test result: Codex confirms that `codex-skillpack` is installed and loaded.

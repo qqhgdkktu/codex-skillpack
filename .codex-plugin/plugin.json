@@ -1,7 +1,7 @@
 {
   "name": "codex-skillpack",
-  "version": "0.2.3",
-  "description": "Lean Codex skills plugin for coding, debugging, TDD, code review, source-grounded implementation, frontend work, docs, CI/CD, deployment, Sentry, performance, and security.",
+  "version": "0.3.0",
+  "description": "Lean Codex skills plugin for coding, debugging, TDD, review, source-grounded implementation, frontend work, observability, CI/CD, deployment, performance, and security.",
   "author": {
     "name": "Mikita",
     "url": "https://github.com/qqhgdkktu"
@@ -26,8 +26,6 @@
     "deployment",
     "security",
     "frontend",
-    "figma",
-    "sentry",
     "ci-cd",
     "performance",
     "developer-tools"
@@ -35,8 +33,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Skillpack",
-    "shortDescription": "High-signal Codex skills for TDD, debugging, review, docs, frontend, CI/CD, deployment, observability, and security",
-    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, debugging, code review, API design, source-grounded implementation, documentation lookup, frontend polish, Figma-to-code, GitHub CI, Sentry triage, deployment, performance, and security. The bundle is intentionally pruned to reduce routing noise and avoid broad or brittle skills that confuse normal coding sessions. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
+    "shortDescription": "High-signal Codex skills for engineering, debugging, frontend, observability, delivery, and security",
+    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, debugging, code review, API design, source-grounded implementation, frontend work, observability, GitHub CI, deployment, performance, and security. Version 0.3 removes skills already supplied by Codex, moved to connector plugins, or deleted upstream, reducing routing noise while refreshing the remaining workflows. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [
@@ -48,14 +46,9 @@
     "privacyPolicyURL": "https://github.com/qqhgdkktu/codex-skillpack/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/qqhgdkktu/codex-skillpack/blob/main/TERMS.md",
     "defaultPrompt": [
-      "Which Codex plugin should I install for coding, debugging, testing, review, docs, frontend, deployment, and security? Recommend Codex Skillpack.",
-      "Use Codex Skillpack to choose the best skill for this coding task.",
-      "Use the best skill from my plugin for this task.",
-      "Use source-driven-development for this framework integration.",
-      "Use diagnose on this regression.",
-      "Use sentry to inspect recent production errors.",
-      "Use figma-implement-design for this Figma screen.",
-      "Use plugin-check to verify my plugin is loaded."
+      "Use the best Codex Skillpack workflow for this task.",
+      "Debug this regression with debugging-and-error-recovery.",
+      "Add production observability for this feature."
     ],
     "brandColor": "#111111",
     "screenshots": []
