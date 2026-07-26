@@ -4,7 +4,7 @@ Lean, practical Codex plugin with 37 high-signal Agent Skills for everyday softw
 
 - Repository: <https://github.com/qqhgdkktu/codex-skillpack>
 - Website: <https://qqhgdkktu.github.io/codex-skillpack/>
-- Current version: `0.3.0`
+- Current version: `0.3.1`
 - Skill count: 37
 - Status: unofficial, mixed-license bundle
 
@@ -42,11 +42,11 @@ Skills were selected from public repositories and pinned to exact commits.
 
 | Source | Stars at selection | License policy |
 |---|---:|---|
-| `addyosmani/agent-skills` | 79,695 | MIT copied into imported skill dirs |
-| `openai/plugins` | 4,656 | per-skill or plugin license preserved |
-| `openai/skills` (legacy pins) | 24,032 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | 455 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | 139 | MIT copied into imported skill dir |
+| `addyosmani/agent-skills` | 80,445 | MIT copied into imported skill dirs |
+| `openai/plugins` | 4,748 | per-skill or plugin license preserved |
+| `openai/skills` (legacy pins) | 24,191 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | 456 | Apache-2.0 copied into imported skill dirs |
+| `hqhq1025/skill-optimizer` | 144 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star count, and license metadata.
 

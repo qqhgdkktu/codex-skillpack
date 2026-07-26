@@ -9,6 +9,8 @@ security, file handling, production launch workflows, source-grounded work,
 observability, frontend workflows, performance, and skill/plugin maintenance.
 On 2026-07-22 the bundle was refreshed and pruned to 37 skills to
 reduce trigger ambiguity and remove capabilities already supplied by Codex.
+On 2026-07-26 five retained engineering skills were refreshed with
+ecosystem-neutral verification and stricter measured-performance guidance.
 
 This project is an unofficial redistribution bundle. It is not affiliated with,
 endorsed by, or sponsored by OpenAI, GitHub, Sentry, Figma, Notion, Linear,
@@ -19,11 +21,11 @@ party states otherwise.
 
 | Repository | Commit | Stars at selection | License policy |
 |---|---|---:|---|
-| `addyosmani/agent-skills` | `2fbfa004a0192529bc997d103fc12f19a3804aab` | 79,695 | MIT copied into imported skill dirs |
-| `openai/plugins` | `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9` | 4,656 | per-skill or plugin license preserved |
-| `openai/skills` | mixed legacy exact pins | 24,032 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1` | 455 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84` | 139 | MIT copied into imported skill dir |
+| `addyosmani/agent-skills` | `7829ffd90d973b6325f5f12f1b1226dcace74443` | 80,445 | MIT copied into imported skill dirs |
+| `openai/plugins` | `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9` | 4,748 | per-skill or plugin license preserved |
+| `openai/skills` | mixed legacy exact pins | 24,191 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1` | 456 | Apache-2.0 copied into imported skill dirs |
+| `hqhq1025/skill-optimizer` | `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84` | 144 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star
 count, and license metadata. `THIRD_PARTY_NOTICES.md` summarizes the same

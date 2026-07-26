@@ -1,6 +1,6 @@
 {
   "name": "codex-skillpack",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Lean Codex skills plugin for coding, debugging, TDD, review, source-grounded implementation, frontend work, observability, CI/CD, deployment, performance, and security.",
   "author": {
     "name": "Mikita",
@@ -34,7 +34,7 @@
   "interface": {
     "displayName": "Codex Skillpack",
     "shortDescription": "High-signal Codex skills for engineering, debugging, frontend, observability, delivery, and security",
-    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, debugging, code review, API design, source-grounded implementation, frontend work, observability, GitHub CI, deployment, performance, and security. Version 0.3 removes skills already supplied by Codex, moved to connector plugins, or deleted upstream, reducing routing noise while refreshing the remaining workflows. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
+    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, debugging, code review, API design, source-grounded implementation, frontend work, observability, GitHub CI, deployment, performance, and security. Version 0.3.1 keeps the lean 37-skill catalog while making verification commands ecosystem-neutral and requiring measured performance wins. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [

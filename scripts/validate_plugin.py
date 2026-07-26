@@ -14,7 +14,7 @@ PLUGIN_JSON = ROOT / ".codex-plugin" / "plugin.json"
 SKILLS_DIR = ROOT / "skills"
 SOURCES_JSON = ROOT / "SKILL_SOURCES.json"
 EXPECTED_SKILL_COUNT = 37
-EXPECTED_VERSION = "0.3.0"
+EXPECTED_VERSION = "0.3.1"
 REQUIRED_DOCS = [
     "README.md",
     "LICENSE.md",
@@ -53,6 +53,15 @@ def validate_relative_links(skill_md: Path, text: str) -> None:
             continue
         if not (skill_md.parent / target).resolve().exists():
             fail(f"{skill_md.relative_to(ROOT)} has broken relative link: {raw_target}")
+
+
+def validate_skill_path_references(skill_md: Path, text: str) -> None:
+    for skill_name in re.findall(r"skills/([a-z0-9]+(?:-[a-z0-9]+)*)/SKILL\.md", text):
+        if not (SKILLS_DIR / skill_name / "SKILL.md").exists():
+            fail(
+                f"{skill_md.relative_to(ROOT)} references missing bundled skill: "
+                f"skills/{skill_name}/SKILL.md"
+            )
 
 
 def main() -> int:
@@ -114,6 +123,7 @@ def main() -> int:
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
             fail(f"{skill_dir.name}/SKILL.md has invalid skill name: {name}")
         validate_relative_links(skill_md, text)
+        validate_skill_path_references(skill_md, text)
         names.append(name)
         if skill_dir.name != "plugin-check" and not (skill_dir / "LICENSE.txt").exists():
             missing_license.append(skill_dir.name)

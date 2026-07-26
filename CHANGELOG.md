@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.1 - 2026-07-26
+
+- Refreshed five retained Addy Osmani engineering skills to the current
+  upstream commit while preserving the lean 37-skill catalog.
+- Replaced npm-only verification assumptions with repository-native test,
+  build, type-check, lint, and dependency-audit commands.
+- Strengthened performance optimization guidance: re-measure under comparable
+  conditions, require gains beyond run-to-run variance, and revert neutral or
+  regression-causing changes.
+- Adapted upstream cross-references to the bundle's existing `tdd` workflow and
+  refreshed source pins and selection metadata.
+- Removed stale references to two unbundled skills and extended validation to
+  reject missing `skills/<name>/SKILL.md` references.
+
 ## 0.3.0 - 2026-07-22
 
 - Refreshed retained Addy Osmani and ok-skills imports to their latest upstream

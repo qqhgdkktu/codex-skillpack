@@ -18,7 +18,7 @@ machine-readable source of truth is `SKILL_SOURCES.json`.
 
 ### `addyosmani/agent-skills`
 
-Pinned commit: `2fbfa004a0192529bc997d103fc12f19a3804aab`
+Pinned commit: `7829ffd90d973b6325f5f12f1b1226dcace74443`
 
 Included skills: `api-and-interface-design`, `ci-cd-and-automation`,
 `code-review-and-quality`, `code-simplification`, `deprecation-and-migration`,
