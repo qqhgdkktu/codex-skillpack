@@ -1,6 +1,6 @@
 ---
 name: skill-personalizer
-description: Use when auditing or adapting newly created, downloaded, forked, installed, or community Agent Skills to the user's tools, habits, directories, session history, and preferred workflows, especially when triggers feel wrong, noisy, or too generic.
+description: Use when auditing or adapting a downloaded or local Agent Skill whose triggers, tools, paths, assumptions, or token cost do not fit its user.
 ---
 
 # Skill Personalizer

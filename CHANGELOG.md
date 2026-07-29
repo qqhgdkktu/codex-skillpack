@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.4.0 - 2026-07-29
+
+- Audited the current `codex-skills` GitHub topic and deeply reviewed the
+  strongest licensed candidates against the existing catalog.
+- Added a concise, version-aware `playwright-testing` skill based on
+  TestDino's Playwright guidance and current official Playwright documentation.
+- Replaced the non-self-contained `improve-codebase-architecture` workflow
+  with `codebase-design`, which has no missing skill or harness dependencies.
+- Removed six broad, duplicate, or non-core skills: `doubt-driven-development`,
+  `idea-refine`, `incremental-implementation`,
+  `planning-and-task-breakdown`, `jupyter-notebook`, and `transcribe`.
+- Reworked `find-docs` to prefer installed and official documentation instead
+  of requiring Context7, and made `spec-driven-development` self-contained.
+- Compressed every retained routing description and added validator limits for
+  per-skill metadata, total catalog size, body length, and frontmatter keys.
+  The bundle now contains 32 skills with materially lower always-loaded
+  routing metadata.
+
 ## 0.3.1 - 2026-07-26
 
 - Refreshed five retained Addy Osmani engineering skills to the current

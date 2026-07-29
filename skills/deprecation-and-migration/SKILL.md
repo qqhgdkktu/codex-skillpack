@@ -1,6 +1,6 @@
 ---
 name: deprecation-and-migration
-description: Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.
+description: Use when retiring an API, feature, dependency, or system and planning a safe compatibility and user migration path.
 ---
 
 # Deprecation and Migration
@@ -180,7 +180,7 @@ the old one            the app                  a later, separate deploy
 4. **Switch reads.** Point the app at `full_name`, keep writing both. Deploy and bake.
 5. **Contract.** Stop writing `name`, then — in a *separate, later* deploy — drop the column.
 
-Each step is independently deployable and reversible: if step 4 misbehaves, roll the code back and `full_name` is still being populated. Treat each phase as a thin vertical slice — see the `incremental-implementation` skill.
+Each step is independently deployable and reversible: if step 4 misbehaves, roll the code back and `full_name` is still being populated. Treat each phase as a thin vertical slice with its own validation and rollback point.
 
 **Rules:**
 - **Additive first, destructive last and alone.** Adds (new nullable column, new table, new index) are safe in any deploy; drops and renames get their own deploy *after* no code references the old shape.

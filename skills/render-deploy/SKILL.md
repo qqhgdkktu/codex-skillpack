@@ -1,11 +1,6 @@
 ---
 name: render-deploy
-description: Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.
-license: MIT
-metadata:
-  author: Render
-  version: "1.1.0"
-  category: deployment
+description: Use when analyzing and deploying an application to Render, including render.yaml Blueprints and dashboard setup.
 ---
 
 # Deploy to Render

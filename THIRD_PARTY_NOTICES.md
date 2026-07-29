@@ -8,11 +8,12 @@ machine-readable source of truth is `SKILL_SOURCES.json`.
 
 | Upstream repository | Skills included | License handling |
 |---|---:|---|
-| `addyosmani/agent-skills` | 18 | MIT license copied into each imported skill directory |
+| `addyosmani/agent-skills` | 14 | MIT license copied into each imported skill directory |
 | `openai/plugins` | 4 | upstream per-skill or plugin license preserved |
-| `openai/skills` | 8 | legacy per-skill `LICENSE.txt` preserved |
-| `mxyhi/ok-skills` | 5 | Apache-2.0 license copied into each imported skill directory |
+| `openai/skills` | 6 | legacy per-skill `LICENSE.txt` preserved |
+| `mxyhi/ok-skills` | 5 | per-skill MIT or Apache-2.0 license preserved |
 | `hqhq1025/skill-optimizer` | 1 | MIT license copied into imported skill directory |
+| `testdino-hq/playwright-skill` | 1 | MIT license copied into imported skill directory |
 
 ## Included Skills By Source
 
@@ -23,11 +24,9 @@ Pinned commit: `7829ffd90d973b6325f5f12f1b1226dcace74443`
 Included skills: `api-and-interface-design`, `ci-cd-and-automation`,
 `code-review-and-quality`, `code-simplification`, `deprecation-and-migration`,
 `debugging-and-error-recovery`, `documentation-and-adrs`,
-`doubt-driven-development`, `frontend-ui-engineering`, `idea-refine`,
-`incremental-implementation`, `performance-optimization`,
-`observability-and-instrumentation`, `planning-and-task-breakdown`, `security-and-hardening`,
-`shipping-and-launch`, `source-driven-development`,
-`spec-driven-development`.
+`frontend-ui-engineering`, `performance-optimization`,
+`observability-and-instrumentation`, `security-and-hardening`,
+`shipping-and-launch`, `source-driven-development`, `spec-driven-development`.
 
 ### `openai/plugins`
 
@@ -42,21 +41,26 @@ The remaining skills have no direct replacement in `openai/plugins` and remain
 pinned to the exact historical commits recorded in `SKILL_SOURCES.json`.
 
 Included skills: `chatgpt-apps`, `cli-creator`, `cloudflare-deploy`,
-`jupyter-notebook`, `migrate-to-codex`, `security-threat-model`, `transcribe`,
-`vercel-deploy`.
+`migrate-to-codex`, `security-threat-model`, `vercel-deploy`.
 
 ### `mxyhi/ok-skills`
 
-Pinned commit: `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1`
+Pinned commit: `94707b6ecc7774933a20c5a8d485ade7190e3bbe`
 
 Included skills: `ai-elements`, `better-icons`, `find-docs`,
-`improve-codebase-architecture`, `tdd`.
+`codebase-design`, `tdd`.
 
 ### `hqhq1025/skill-optimizer`
 
 Pinned commit: `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84`
 
 Included skill: `skill-personalizer`.
+
+### `testdino-hq/playwright-skill`
+
+Pinned commit: `d3be9ca4d7303e2aee3eba4842963abf573117b0`
+
+Included skill: `playwright-testing`.
 
 ## Redistribution Notes
 

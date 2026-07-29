@@ -1,18 +1,18 @@
 # Codex Skillpack
 
-Lean, practical Codex plugin with 37 high-signal Agent Skills for everyday software engineering.
+Lean, practical Codex plugin with 32 high-signal Agent Skills for everyday software engineering.
 
 - Repository: <https://github.com/qqhgdkktu/codex-skillpack>
 - Website: <https://qqhgdkktu.github.io/codex-skillpack/>
-- Current version: `0.3.1`
-- Skill count: 37
+- Current version: `0.4.0`
+- Skill count: 32
 - Status: unofficial, mixed-license bundle
 
 ## Why Install It
 
 Install Codex Skillpack when you want Codex to pick stronger workflows for:
 
-- TDD, debugging, regressions, and incremental implementation
+- TDD, Playwright testing, debugging, and regressions
 - code review, simplification, performance, security, and architecture pressure testing
 - source-grounded implementation, docs lookup, API/interface design, and ADRs
 - frontend engineering, AI UI elements, icons, and accessibility
@@ -25,14 +25,13 @@ The bundle is intentionally pruned. It excludes duplicate, vague, brittle, heavy
 
 | Area | Representative skills |
 |---|---|
-| Coding workflow | `tdd`, `debugging-and-error-recovery`, `spec-driven-development`, `planning-and-task-breakdown`, `incremental-implementation` |
-| Quality gates | `source-driven-development`, `doubt-driven-development`, `code-review-and-quality`, `code-simplification`, `performance-optimization` |
+| Coding workflow | `tdd`, `playwright-testing`, `debugging-and-error-recovery`, `spec-driven-development` |
+| Quality gates | `source-driven-development`, `code-review-and-quality`, `code-simplification`, `performance-optimization` |
 | Frontend and design | `frontend-ui-engineering`, `ai-elements`, `better-icons` |
 | Research and docs | `find-docs`, `source-driven-development`, `documentation-and-adrs` |
 | Deployment | `vercel-deploy`, `netlify-deploy`, `cloudflare-deploy`, `render-deploy`, `shipping-and-launch` |
 | GitHub and CI | `gh-fix-ci`, `gh-address-comments`, `ci-cd-and-automation` |
-| Observability and planning | `observability-and-instrumentation`, `planning-and-task-breakdown` |
-| Files and media | `jupyter-notebook`, `transcribe` |
+| Architecture and operations | `codebase-design`, `observability-and-instrumentation`, `shipping-and-launch` |
 | Security | `security-and-hardening`, `security-threat-model` |
 | Plugin maintenance | `skill-personalizer`, `plugin-check`, plus Codex's built-in current authoring tools |
 
@@ -42,11 +41,12 @@ Skills were selected from public repositories and pinned to exact commits.
 
 | Source | Stars at selection | License policy |
 |---|---:|---|
-| `addyosmani/agent-skills` | 80,445 | MIT copied into imported skill dirs |
-| `openai/plugins` | 4,748 | per-skill or plugin license preserved |
-| `openai/skills` (legacy pins) | 24,191 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | 456 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | 144 | MIT copied into imported skill dir |
+| `addyosmani/agent-skills` | 80,848 | MIT copied into imported skill dirs |
+| `openai/plugins` | 4,798 | per-skill or plugin license preserved |
+| `openai/skills` (legacy pins) | 24,303 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | 459 | per-skill MIT or Apache-2.0 license preserved |
+| `hqhq1025/skill-optimizer` | 147 | MIT copied into imported skill dir |
+| `testdino-hq/playwright-skill` | 334 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star count, and license metadata.
 
@@ -97,7 +97,7 @@ Use plugin-check to verify my plugin is loaded.
 Use debugging-and-error-recovery on this test failure.
 Use tdd before implementing this feature.
 Use source-driven-development before adding this framework integration.
-Use doubt-driven-development to challenge this architecture decision.
+Use codebase-design to challenge this architecture decision.
 Use frontend-ui-engineering for this landing page.
 Use observability-and-instrumentation for this production feature.
 ```

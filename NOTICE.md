@@ -4,13 +4,16 @@ This plugin bundles selected third-party Agent Skills for local and shared Codex
 use.
 
 The selection favors practical, working skills for software engineering:
-debugging, TDD, planning, frontend work, documentation, deployment, GitHub/CI,
-security, file handling, production launch workflows, source-grounded work,
-observability, frontend workflows, performance, and skill/plugin maintenance.
+debugging, TDD, Playwright testing, frontend work, documentation, architecture,
+deployment, GitHub/CI, security, production launch workflows, source-grounded
+work, observability, performance, and skill/plugin maintenance.
 On 2026-07-22 the bundle was refreshed and pruned to 37 skills to
 reduce trigger ambiguity and remove capabilities already supplied by Codex.
 On 2026-07-26 five retained engineering skills were refreshed with
 ecosystem-neutral verification and stricter measured-performance guidance.
+On 2026-07-29 the catalog was reduced to 32 skills, routing metadata was
+compressed, a Playwright testing workflow was added, and the broken
+architecture workflow was replaced with a self-contained design skill.
 
 This project is an unofficial redistribution bundle. It is not affiliated with,
 endorsed by, or sponsored by OpenAI, GitHub, Sentry, Figma, Notion, Linear,
@@ -21,11 +24,12 @@ party states otherwise.
 
 | Repository | Commit | Stars at selection | License policy |
 |---|---|---:|---|
-| `addyosmani/agent-skills` | `7829ffd90d973b6325f5f12f1b1226dcace74443` | 80,445 | MIT copied into imported skill dirs |
-| `openai/plugins` | `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9` | 4,748 | per-skill or plugin license preserved |
-| `openai/skills` | mixed legacy exact pins | 24,191 | per-skill `LICENSE.txt` |
-| `mxyhi/ok-skills` | `12ba4e9c538b8abd99acd0acb1d8bafca5c2a4a1` | 456 | Apache-2.0 copied into imported skill dirs |
-| `hqhq1025/skill-optimizer` | `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84` | 144 | MIT copied into imported skill dir |
+| `addyosmani/agent-skills` | `7829ffd90d973b6325f5f12f1b1226dcace74443` | 80,848 | MIT copied into imported skill dirs |
+| `openai/plugins` | `11c74d6ba24d3a6d48f54a194cd00ef3beea18f9` | 4,798 | per-skill or plugin license preserved |
+| `openai/skills` | mixed legacy exact pins | 24,303 | per-skill `LICENSE.txt` |
+| `mxyhi/ok-skills` | `94707b6ecc7774933a20c5a8d485ade7190e3bbe` | 459 | per-skill MIT or Apache-2.0 license preserved |
+| `hqhq1025/skill-optimizer` | `b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84` | 147 | MIT copied into imported skill dir |
+| `testdino-hq/playwright-skill` | `d3be9ca4d7303e2aee3eba4842963abf573117b0` | 334 | MIT copied into imported skill dir |
 
 `SKILL_SOURCES.json` is the source of truth for skill-level source, commit, star
 count, and license metadata. `THIRD_PARTY_NOTICES.md` summarizes the same
@@ -80,8 +84,6 @@ least-duplicative subset.
 Shared reference files from the upstream `references/` directory were copied
 only into the imported skills that link to them, so Codex can resolve them
 relative to `SKILL.md` without bundling unused material.
-The `idea-refine` skill was lightly adapted to replace an upstream absolute
-script path with a local `scripts/idea-refine.sh` path.
 
 ## Exclusions
 

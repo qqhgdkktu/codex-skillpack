@@ -13,8 +13,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_JSON = ROOT / ".codex-plugin" / "plugin.json"
 SKILLS_DIR = ROOT / "skills"
 SOURCES_JSON = ROOT / "SKILL_SOURCES.json"
-EXPECTED_SKILL_COUNT = 37
-EXPECTED_VERSION = "0.3.1"
+EXPECTED_SKILL_COUNT = 32
+EXPECTED_VERSION = "0.4.0"
+MAX_DESCRIPTION_CHARS = 220
+MAX_CATALOG_CHARS = 6000
+MAX_SKILL_LINES = 500
+ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
 REQUIRED_DOCS = [
     "README.md",
     "LICENSE.md",
@@ -46,13 +50,27 @@ def frontmatter_value(text: str, key: str) -> str | None:
     return match.group(1).strip() if match else None
 
 
-def validate_relative_links(skill_md: Path, text: str) -> None:
+def frontmatter_keys(text: str) -> set[str]:
+    if not text.startswith("---\n"):
+        return set()
+    parts = text.split("---", 2)
+    if len(parts) < 3:
+        return set()
+    keys: set[str] = set()
+    for line in parts[1].splitlines():
+        match = re.match(r"^([A-Za-z0-9_-]+):", line)
+        if match:
+            keys.add(match.group(1))
+    return keys
+
+
+def validate_relative_links(markdown_path: Path, text: str) -> None:
     for raw_target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", text):
         target = raw_target.strip().strip("<>").split("#", 1)[0]
         if not target or target.startswith(("#", "/", "mailto:")) or "://" in target:
             continue
-        if not (skill_md.parent / target).resolve().exists():
-            fail(f"{skill_md.relative_to(ROOT)} has broken relative link: {raw_target}")
+        if not (markdown_path.parent / target).resolve().exists():
+            fail(f"{markdown_path.relative_to(ROOT)} has broken relative link: {raw_target}")
 
 
 def validate_skill_path_references(skill_md: Path, text: str) -> None:
@@ -94,6 +112,13 @@ def main() -> int:
     imported = {entry["skill"] for entry in source_entries}
     if len(imported) != len(source_entries):
         fail("SKILL_SOURCES.json contains duplicate skill entries")
+    for entry in source_entries:
+        if not re.fullmatch(r"[0-9a-f]{40}", str(entry.get("commit", ""))):
+            fail(f"SKILL_SOURCES.json has invalid commit for {entry.get('skill')}")
+        if not isinstance(entry.get("stars"), int) or entry["stars"] < 0:
+            fail(f"SKILL_SOURCES.json has invalid star count for {entry.get('skill')}")
+        if not entry.get("source") or not entry.get("license"):
+            fail(f"SKILL_SOURCES.json has incomplete provenance for {entry.get('skill')}")
     expected_imported = EXPECTED_SKILL_COUNT - 1  # plugin-check is local to this bundle.
     if len(imported) != expected_imported:
         fail(
@@ -107,6 +132,7 @@ def main() -> int:
 
     names: list[str] = []
     missing_license: list[str] = []
+    catalog_chars = 0
     for skill_dir in skill_dirs:
         skill_md = skill_dir / "SKILL.md"
         if not skill_md.exists():
@@ -118,13 +144,36 @@ def main() -> int:
             fail(f"{skill_dir.name}/SKILL.md is missing name frontmatter")
         if not description:
             fail(f"{skill_dir.name}/SKILL.md is missing description frontmatter")
+        keys = frontmatter_keys(text)
+        if keys != ALLOWED_FRONTMATTER_KEYS:
+            fail(
+                f"{skill_dir.name}/SKILL.md frontmatter keys must be "
+                f"{sorted(ALLOWED_FRONTMATTER_KEYS)}, found {sorted(keys)}"
+            )
         if name != skill_dir.name:
             fail(f"{skill_dir.name}/SKILL.md name must match its directory")
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
             fail(f"{skill_dir.name}/SKILL.md has invalid skill name: {name}")
-        validate_relative_links(skill_md, text)
+        if not description.startswith(("Use when", "Use only when")):
+            fail(f"{skill_dir.name}/SKILL.md description must start with a trigger")
+        if len(description) > MAX_DESCRIPTION_CHARS:
+            fail(
+                f"{skill_dir.name}/SKILL.md description is {len(description)} chars; "
+                f"maximum is {MAX_DESCRIPTION_CHARS}"
+            )
+        if len(text.splitlines()) > MAX_SKILL_LINES:
+            fail(
+                f"{skill_dir.name}/SKILL.md is {len(text.splitlines())} lines; "
+                f"maximum is {MAX_SKILL_LINES}"
+            )
+        if any(pattern in text for pattern in ("subagent_type=", "read_url_content(")):
+            fail(f"{skill_dir.name}/SKILL.md contains a non-portable tool assumption")
+        for markdown_path in skill_dir.rglob("*.md"):
+            markdown_text = markdown_path.read_text(encoding="utf-8", errors="replace")
+            validate_relative_links(markdown_path, markdown_text)
         validate_skill_path_references(skill_md, text)
         names.append(name)
+        catalog_chars += len(name) + len(description)
         if skill_dir.name != "plugin-check" and not (skill_dir / "LICENSE.txt").exists():
             missing_license.append(skill_dir.name)
 
@@ -139,10 +188,16 @@ def main() -> int:
         missing = sorted(expected_imported_names - imported)
         extra = sorted(imported - expected_imported_names)
         fail(f"SKILL_SOURCES.json mismatch; missing={missing}, extra={extra}")
+    if catalog_chars > MAX_CATALOG_CHARS:
+        fail(
+            f"skill name+description catalog is {catalog_chars} chars; "
+            f"maximum is {MAX_CATALOG_CHARS}"
+        )
 
     print(
         f"ok: {len(skill_dirs)} skills, {len(imported)} imported, "
-        f"version {EXPECTED_VERSION}, docs present, no duplicate names"
+        f"version {EXPECTED_VERSION}, catalog {catalog_chars} chars, "
+        "docs present, no duplicate names"
     )
     return 0
 

@@ -1,6 +1,6 @@
 ---
 name: better-icons
-description: 'Use when selecting, searching, or retrieving icons for a project. Provides Iconify-backed CLI and MCP access to more than 200 icon libraries.'
+description: Use when selecting or retrieving project icons through Iconify-backed CLI or MCP tools.
 ---
 
 # Better Icons

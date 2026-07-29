@@ -1,7 +1,7 @@
 {
   "name": "codex-skillpack",
-  "version": "0.3.1",
-  "description": "Lean Codex skills plugin for coding, debugging, TDD, review, source-grounded implementation, frontend work, observability, CI/CD, deployment, performance, and security.",
+  "version": "0.4.0",
+  "description": "Lean Codex skills plugin for coding, debugging, Playwright testing, TDD, review, architecture, frontend work, observability, delivery, performance, and security.",
   "author": {
     "name": "Mikita",
     "url": "https://github.com/qqhgdkktu"
@@ -18,6 +18,7 @@
     "local",
     "debugging",
     "testing",
+    "playwright",
     "tdd",
     "code-review",
     "source-driven-development",
@@ -34,7 +35,7 @@
   "interface": {
     "displayName": "Codex Skillpack",
     "shortDescription": "High-signal Codex skills for engineering, debugging, frontend, observability, delivery, and security",
-    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, debugging, code review, API design, source-grounded implementation, frontend work, observability, GitHub CI, deployment, performance, and security. Version 0.3.1 keeps the lean 37-skill catalog while making verification commands ecosystem-neutral and requiring measured performance wins. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
+    "longDescription": "Install Codex Skillpack when you want Codex to choose practical engineering workflows for TDD, Playwright testing, debugging, code review, API and module design, source-grounded implementation, frontend work, observability, GitHub CI, deployment, performance, and security. Version 0.4.0 keeps 32 high-signal skills and compresses routing metadata to reduce context cost. This is an unofficial mixed-license plugin; see LICENSE.md, NOTICE.md, PRIVACY.md, TERMS.md, and SECURITY.md.",
     "developerName": "Mikita",
     "category": "Productivity",
     "capabilities": [
